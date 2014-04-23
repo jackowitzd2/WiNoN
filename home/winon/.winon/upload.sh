@@ -29,7 +29,7 @@ done
 set -e
 set -o pipefail
 archive_path=$PERSIST_PATH/nym.enc
-tar -cjp -C $nym_path . | openssl aes-256-cbc -out $archive_path
+tar -cjpS -C $nym_path . | openssl aes-256-cbc -out $archive_path
 if [ $? -ne 0 ]; then
   echo "Failed creating encrypted archive at $archive_path."
   exit 1
