@@ -1,5 +1,8 @@
 #!/bin/bash
-chromium-browser http://www.cnn.com \
-  http://www.youtube.com &
-xterm &
+
+chromium-browser --load-extension=/home/winon/.winon/extensions/twitter/ \
+  https://twitter.com &
+sleep 60
+sudo pkill -f chromium-browser
+sudo halt -p
 exit 0
