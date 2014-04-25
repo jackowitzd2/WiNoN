@@ -37,6 +37,7 @@ if [ $? -ne 0 ]; then
   echo "Failed extracting encrypted archive."
   exit 1
 fi
+rm $DOWNLOAD_PATH/nym.enc
 
 # Start the nym
 $WPATH/start_nym.sh start $DOWNLOAD_PATH

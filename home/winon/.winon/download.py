@@ -41,7 +41,7 @@ except HttpError:
 
 print 'Saved nyms:'
 for i, f in enumerate(files['items']):
-  print '\t' + str(i) + ': ' + f['title']
+  print '\t' + str(i) + ': ' + f['title'] + ' (' + f['description'] + ')'
 file_index = int(raw_input('Restore nym #: ').strip())
 
 download_url = files['items'][file_index]['downloadUrl']
